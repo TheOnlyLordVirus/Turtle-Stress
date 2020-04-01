@@ -13,7 +13,7 @@
 
   $DATABASE_HOST = 'localhost';
   $DATABASE_USER = 'root';
-  $DATABASE_PASS = 'Kush007';
+  $DATABASE_PASS = 'MyPassWord';
   $DATABASE_NAME = 'USER_INFO_DB';
 
   // Try and connect using the info above.
