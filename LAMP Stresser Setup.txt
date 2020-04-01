@@ -8,7 +8,7 @@ yum update -y
 yum install nano -y
 
 // Update MySQL repo.
-nano /etc/yum.repos.d/MariaDB.repo 
+nano /etc/yum.repos.d/MariaDB.repo
 
 // inside MariaDB.repo
 [mariadb]
@@ -60,6 +60,8 @@ create table IP_HISTORY
   LOGGIN_DATE datetime not null default NOW()
 );
 
+create view STORED_IP as select u.USER_NAME, h.LOGGED_IP, h.LOGGIN_DATE from IP_HISTORY h inner join USER u on h.USER_ID = u.USER_ID;
+
 DELIMITER $$ ;
 
 create procedure addUser (in NAME varchar(25), in PASS varchar(25), in ADMIN boolean)
@@ -77,6 +79,7 @@ $$
 
 DELIMITER ; $$
 
+/*Create Turtle Stresser Admin*/
 call addUser('admin user', 'password', true);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -88,6 +91,6 @@ call addUser('admin user', 'password', true);
 chmod -R 777 /var/www
 
 semanage fcontext -a -t httpd_sys_script_exec_t "/var/www/html/assets/server-attacks/(.*)"
- 
+
 restorecon -R -v /var/www/html/assets/server-attacks/
 //
