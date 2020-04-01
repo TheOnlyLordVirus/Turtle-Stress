@@ -1,0 +1,52 @@
+ul, li
+{
+  list-style: none;
+  list-style-position: inside;
+  margin:0;
+  padding:0;
+  margin: auto;
+}
+
+.myTabs
+{
+  display: inline-flex;
+  background-color: #999999;
+  padding: 40px;
+  text-align: center;
+
+  width: 90%;
+  border-radius: 10px;
+}
+
+.tabContent
+{
+  display: none;
+  background-color: #858585;
+  padding: 60px;
+}
+
+.tab
+{
+  display: inline-block;
+  background-color: #808080;
+  padding: 30px;
+  width: 200px;
+  margin: 0px;
+}
+
+.tab:hover
+{
+  cursor: pointer;
+  background-color: #707070;
+  text-decoration: none;
+}
+
+.selected
+{
+  background-color: #505050;
+}
+
+.enabled
+{
+  display: block;
+}
