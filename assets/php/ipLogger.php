@@ -11,7 +11,7 @@
   $host = "localhost";
   $database = "USER_INFO_DB";
   $user = "root";
-  $password = "Kush007";
+  $password = "MyPassWord";
 
   $connection = mysqli_connect($host, $user, $password, $database);
 
