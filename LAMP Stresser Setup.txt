@@ -18,7 +18,8 @@ gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 //
 
-yum install MariaDB-server MariaDB-client httpd php* -y --skip-broken
+yum install MariaDB-server MariaDB-client httpd -y
+yum install php php-fpm php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json php-pdo php-pecl-apcu php-pecl-apcu-devel -y
 
 ///////////////////////////
 ///Start MySQL and Apache.//
