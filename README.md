@@ -26,13 +26,13 @@ yum install MariaDB-server MariaDB-client httpd -y
 
 Start MySQL and Apache
 ----------------------
-``
+```
 systemctl start mariadb.service
 
 systemctl enable mariadb.service
 
 systemctl start httpd
-``
+```
 
 
 Update MySQL, Create a database for users and IPs
