@@ -1,10 +1,14 @@
 **CentOS 7 LAMP install**
 -------------------------
+```
 yum upgrade -y
 yum install nano httpd gcc -y
-
+yum install php php-fpm php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json php-pdo php-pecl-apcu php-pecl-apcu-devel -y
+```
 **Update MySQL repo**
+```
 nano /etc/yum.repos.d/MariaDB.repo
+```
 
 **inside MariaDB.repo**
 ```
@@ -15,9 +19,9 @@ gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 ```
 
+**Install MariaDB from newly added repo**
 ```
 yum install MariaDB-server MariaDB-client httpd -y
-yum install php php-fpm php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json php-pdo php-pecl-apcu php-pecl-apcu-devel -y
 ```
 
 Start MySQL and Apache
@@ -86,8 +90,6 @@ DELIMITER ; $$
 /*Create Turtle Stresser Admin*/
 call addUser('admin user', 'password', true);
 ```
-
-
 
 Alow apache user to execute binarys via php
 -------------------------------------------
