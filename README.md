@@ -94,7 +94,7 @@ call addUser('admin user', 'password', true);
 Alow apache user to execute binarys via php
 -------------------------------------------
 ```
-chmod -R 777 /var/wwwassets/server-attacks
+chmod -R 777 /var/www/assets/server-attacks
 
 semanage fcontext -a -t httpd_sys_script_exec_t "/var/www/html/assets/server-attacks/(.*)"
 
