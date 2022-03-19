@@ -38,9 +38,9 @@ systemctl start httpd
 Update MySQL, Create a database for users and IPs
 -------------------------------------------------
 ```
-mysql_upgrade
+mysql_upgrade // This may not be needed if your on the latest version.
 
-mysql_secure_installation
+mariadb-secure-installation
 
 mysql -pMyPassWord
 ```
