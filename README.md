@@ -14,7 +14,7 @@ nano /etc/yum.repos.d/MariaDB.repo
 ```
 [mariadb]
 name = MariaDB
-baseurl = http://yum.mariadb.org/10.2/centos7-amd64
+baseurl = http://yum.mariadb.org/10.8.2/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 ```
